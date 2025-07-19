@@ -19,6 +19,10 @@ export default function NewTaskContainer () {
         }
     }
 
+    const handleDelete = (element) => {
+        setTasks(tasks.filter(task => task !== element))
+    }
+
     return(
         <div id='mainTaskContainer'>
             <input
@@ -30,16 +34,15 @@ export default function NewTaskContainer () {
                 placeholder='Add new task'
                 >
             </input>
-            <button onClick={handleNewTask}
-            >Add Task</button>
+            <button onClick={handleNewTask}>Add Task</button>
             <div id='tasksBox'>
                 {tasks.map((task, index) => (
-                <div class="card">
-                    <div class="card__content">{task}</div>
-                    <div class="blob"></div>
-                    <div class="blob"></div>
-                    <div class="blob"></div>
-                    <div class="blob"></div>
+                <div className="card">
+                    <div className="card_content" key={index}>{task}
+                    </div>
+                    <div className="delete">
+                        <button type='button' className='delete_content' onClick={() => handleDelete(task)}>Delete</button>
+                    </div>
                 </div>
                 ))}
             </div>

@@ -63,7 +63,8 @@ body, html {
   width: 190px;
   min-height: 25px;
   padding: 25px 10px;
-  background: lightgrey;
+  background: #214fa3;
+  background: linear-gradient(90deg, rgba(33, 79, 163, 1) 0%, rgba(87, 199, 133, 1) 79%, rgba(237, 221, 83, 1) 98%);
   box-shadow: #d11bff42 0 15px 40px -5px;
   z-index: 1;
   border-radius: 21px;
@@ -83,35 +84,30 @@ body, html {
   text-align: center;
 }
 
-.card .blob {
-  position: absolute;
-  z-index: -1;
-  border-radius: 5em;
-  width: 200px;
-  height: 200px;
+.delete {
+  border-radius: 20px;
+  background: #214fa3;
+  background: linear-gradient(90deg, rgba(33, 79, 163, 1) 0%, rgba(87, 199, 133, 1) 19%, rgba(237, 221, 83, 1) 49%);
 }
 
-.card .blob:nth-child(2) {
-  left: -50px;
-  top: -90px;
-  background: #ff930f;
+.delete_content {
+  background: #e74c3c; /* nice red */
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.card .blob:nth-child(3) {
-  left: 110px;
-  top: -20px;
-  z-index: -1;
-  background: #bf0fff;
+.delete_content:hover {
+  background: #c0392b; /* darker red on hover */
+  transform: scale(1.05);
 }
 
-.card .blob:nth-child(4) {
-  left: -40px;
-  top: 100px;
-  background: #ff1b6b;
-}
-
-.card .blob:nth-child(5) {
-  left: 100px;
-  top: 180px;
-  background: #0061ff;
+.delete_content:active {
+  transform: scale(0.95);
 }
