@@ -3,7 +3,7 @@ import NewTaskContainer from "./components/Inputs.jsx"
 
 function App() {
   const appStyle = {
-    backgroundColor: "#66A9E2",
+    background: '#292837ff',
     minHeight: "100vh",
     borderRadius: "8px",
     margin : '0'

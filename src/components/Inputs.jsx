@@ -16,8 +16,11 @@ export default function NewTaskContainer () {
         if(event.key === 'Enter') {
             setTasks([...tasks, newTask]);
             setNewTask('');
+        } else if (event.key === 'Escape'){
+            setNewTask('');
         }
     }
+
 
     const handleDelete = (element) => {
         setTasks(tasks.filter(task => task !== element))
@@ -25,6 +28,7 @@ export default function NewTaskContainer () {
 
     return(
         <div id='mainTaskContainer'>
+
             <input
                 id="inputBox"
                 type='text'
@@ -34,7 +38,9 @@ export default function NewTaskContainer () {
                 placeholder='Add new task'
                 >
             </input>
+            <br></br>
             <button onClick={handleNewTask}>Add Task</button>
+            <br></br>
             <div id='tasksBox'>
                 {tasks.map((task, index) => (
                 <div className="card">
@@ -44,8 +50,9 @@ export default function NewTaskContainer () {
                         <button type='button' className='delete_content' onClick={() => handleDelete(task)}>Delete</button>
                     </div>
                 </div>
-                ))}
+                ))};
             </div>
+
         </div>
     )
 }

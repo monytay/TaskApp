@@ -12,14 +12,14 @@ body, html {
     }
 
 #styleComponent {
-        background-color: #162DBF;
+        background-color: #3a3a47;
         padding: 20px 10px;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         border-radius: 6px;
-        color: white;
-        border: 2px solid white;
+        color: rgb(194, 172, 30);
+        border: 2px solid rgb(194, 172, 30);
         text-align: center;
         font-family: "Popins", sans-serif;
         transition: transform 0.3s ease,background 0.3s ease;
@@ -27,7 +27,22 @@ body, html {
 
 #styleComponent:hover {
     transform: scale(1.2);
-    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    background: linear-gradient(135deg, #454545, #727272);
+}
+
+#inputBox {
+  width:10cm;
+  height:2cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Popins", sans-serif;
+  font-size: larger;
+  border-radius: 12px;
+  border: rgb(194,172,30);
+  background-color: #292837ff;
+  color: rgb(194, 172, 30);
 }
 
 
@@ -35,9 +50,9 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%; 
-    margin: 0 auto;
-    background-color: #162DBF;
+    width: 90%;
+    margin: auto;
+    background: #3a3a47;
     padding: 20px;
     border-radius: 6px;
 }
